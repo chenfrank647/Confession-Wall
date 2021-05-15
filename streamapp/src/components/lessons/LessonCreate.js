@@ -12,7 +12,7 @@ class LessonCreate extends React.Component {
    render(){
     return (
         <div>
-            <h3>Create a Lesson</h3>
+            <h3 style={{color:'violet'}}>Log your confession</h3>
             <LessonForm onSubmit={this.onSubmit}/>
         </div> 
     );

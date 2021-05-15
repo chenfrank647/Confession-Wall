@@ -19,7 +19,7 @@ class LessonEdit extends React.Component {
         }
         return (
             <div>
-            <h3 style={{color: 'violet'}}>Edit a Lesson</h3>
+            <h3 style={{color: 'violet'}}>Edit your confession</h3>
             <LessonForm initialValues = {_.pick(this.props.stream, 'title', 'description', 'audience')} onSubmit={this.onSubmit}/>
         </div> 
         );
