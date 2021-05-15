@@ -29,10 +29,10 @@ class LessonForm extends React.Component {
    render(){
     return (
         <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
-            <Field name = "title" component = {this.renderInput}  label = "Enter Course Name"/>
-            <Field name = "description" component = {this.renderInput} label = "Provide a description"/>
-            <Field name = "audience" component = {this.renderInput} label = "Target grades"/>
-            <button className = "ui button primary">Submit</button>
+            <Field name = "title" component = {this.renderInput}  label = "Confession addressed to: "/>
+            <Field name = "description" component = {this.renderInput} label = "Contents:"/>
+            <Field name = "audience" component = {this.renderInput} label = "Contact:"/>
+            <button className = "ui button pink">Submit</button>
         </form>
     );
    }
@@ -43,9 +43,9 @@ class LessonForm extends React.Component {
 const validate = (formValues) => {
     const errors = {};
     if(!formValues.title){
-        errors.title = 'Your lesson needs a title';
+        errors.title = 'Your confession needs an addressee';
     }else if(!formValues.description){
-        errors.description = 'Please add a short description for your lesson'
+        errors.description = 'Please add some contents!'
     }
     return errors;
 }

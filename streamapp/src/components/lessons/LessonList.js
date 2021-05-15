@@ -12,10 +12,8 @@ class LessonList extends React.Component{
         if(stream.userId===this.props.currentUserId){
             return(
                 <div className="right floated content">
-                    <Link to={`/lessons/edit/${stream.id}`} className="ui button primary">Edit</Link>
-                    <button className="ui button negative">
-                        Delete
-                    </button>
+                    <Link to={`/confessions/edit/${stream.id}`} className="ui button pink">Edit</Link>
+                    <Link to={`/confessions/delete/${stream.id}`} className="ui button pink">Delete</Link>    
                 </div>
             );
         }
@@ -25,8 +23,8 @@ class LessonList extends React.Component{
         if(this.props.isSignedIn){
             return(
                 <div style={{textAlign:'right'}}>
-                    <Link to="/lessons/new" className="ui button primary">
-                        Create Lesson
+                    <Link to="/confessions/new" className="ui button pink">
+                        Confess!
                     </Link>
                 </div>
             );
@@ -38,14 +36,16 @@ class LessonList extends React.Component{
             return (
                 <div className="item" key = {stream.id}>
                     {this.renderAdmin(stream)}
-                    <i className="large middle aligned icon camera"/>
+                    <i className="large middle aligned icon heart pink"/>
                     <div className = "content">
-                        {stream.title}
+                        <div>
+                            <h5>{`To: ${stream.title}`}</h5>
+                        </div>
                         <div className="description">
                             {stream.description}
                         </div>
                         <div className="audience">
-                            {`${stream.audience ? `Grades: ${stream.audience}`:''}`}
+                            {`${stream.audience ? `Contact me: ${stream.audience}`:''}`}
                         </div>
                     </div>  
                 </div>
@@ -55,7 +55,8 @@ class LessonList extends React.Component{
     render(){
         return (
             <div>
-                <h2>Streams</h2>
+                <h2 style={{color: 'violet'}}>Confessions</h2>
+                <div style={{color: 'violet'}}>Log in to confess your love</div>
                 <div className="ui celled list">
                     {this.renderList()}
                 </div>

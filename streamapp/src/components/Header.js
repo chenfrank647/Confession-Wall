@@ -5,12 +5,12 @@ import GoogleAuth from './GoogleAuth';
 const Header=( ) =>{
     return(
         <div className="ui secondary pointing menu">
-            <Link to="/" className="item">
-                LessonStream
+            <Link to="/" className="item" style={{color:'violet'}}>
+                Confession Wall
             </Link>
             <div className="right menu">
-                <Link to="/" className="item">
-                    All lessons
+                <Link to="/" className="item" style={{color:'violet'}}>
+                    All confessions
                 </Link>
                 <GoogleAuth/>
             </div>

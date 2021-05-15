@@ -3,6 +3,7 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import {fetchStream, editStream} from '../../actions';
 import LessonForm from './LessonForm'
+
 class LessonEdit extends React.Component {
     componentDidMount(){
         this.props.fetchStream(this.props.match.params.id);
@@ -18,7 +19,7 @@ class LessonEdit extends React.Component {
         }
         return (
             <div>
-            <h3>Edit a Lesson</h3>
+            <h3 style={{color: 'violet'}}>Edit a Lesson</h3>
             <LessonForm initialValues = {_.pick(this.props.stream, 'title', 'description', 'audience')} onSubmit={this.onSubmit}/>
         </div> 
         );

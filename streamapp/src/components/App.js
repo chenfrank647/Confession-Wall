@@ -11,15 +11,14 @@ import history from '../history';
 const App = () => {
     return (
         <div className="ui container">
-            
             <Router history={history}>
                 <div>
                     <Header/>
                     <Route path ="/" exact component={LessonList}/>
-                    <Route path ="/lessons/new" exact component={LessonCreate}/>
-                    <Route path ="/lessons/edit/:id" exact component={LessonEdit}/>
-                    <Route path ="/lessons/delete" exact component={LessonDelete}/>
-                    <Route path ="/lessons/show" exact component={LessonShow}/>
+                    <Route path ="/confessions/new" exact component={LessonCreate}/>
+                    <Route path ="/confessions/edit/:id" exact component={LessonEdit}/>
+                    <Route path ="/confessions/delete/:id" exact component={LessonDelete}/>
+                    <Route path ="/confessions/show" exact component={LessonShow}/>
                 </div>
             </Router>
         </div>
