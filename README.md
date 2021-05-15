@@ -1,6 +1,7 @@
 # Confession-Wall
 
-This is a Confession Wall Web App created using React and Redux
+This is a Confession Wall Web App created using React and Redux.
+
 The database is a simple JSON Server Restful API and the authentication is handled using Google OAuth.
 
 Adapted from Udemy course tutorial on React and Redux by Stephen Grider
